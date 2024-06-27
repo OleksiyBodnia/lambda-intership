@@ -1,6 +1,7 @@
 import axios from "axios";
 import dotenv from "dotenv";
 import TelegramBot from 'node-telegram-bot-api';
+import http from 'http';
 
 dotenv.config();
 
@@ -21,6 +22,16 @@ bot.onText(/\/start/, (msg) => {
   };
 
   bot.sendMessage(chatId, 'Вітаємо в Weather Forecast Bot!', keyboard);
+});
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Telegram Bot is running!');
+});
+
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
 
 bot.on('message', async (msg) => {
