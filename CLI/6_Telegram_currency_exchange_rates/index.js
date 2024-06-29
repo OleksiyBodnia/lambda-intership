@@ -1,193 +1,151 @@
-import axios from "axios";
-import dotenv from "dotenv";
 import TelegramBot from 'node-telegram-bot-api';
-import http from 'http';
-import NodeCache from "node-cache";
+import axios from 'axios';
+import dotenv from 'dotenv';
+import express from 'express';
 
 dotenv.config();
 
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
-const city = 'Київ';
+const WEATHER_API_KEY = process.env.WEATHER_API_KEY;
+const CITY = 'Київ';
 
-bot.onText(/\/start/, (msg) => {
+const mainMenu = {
+  reply_markup: {
+    keyboard: [['Прогноз погоди'], ['Курс валют']],
+    resize_keyboard: true,
+  },
+};
+
+const weatherMenu = {
+  reply_markup: {
+    keyboard: [
+      ['З інтервалом 3 години', 'З інтервалом 6 годин'],
+      ['Повернутися назад'],
+    ],
+    resize_keyboard: true,
+  },
+};
+
+const currencyMenu = {
+  reply_markup: {
+    keyboard: [['Курс USD', 'Курс EUR'], ['Повернутися назад']],
+    resize_keyboard: true,
+  },
+};
+
+bot.onText(/\/start/, msg => {
+  bot.sendMessage(msg.chat.id, 'Виберіть опцію:', mainMenu);
+});
+
+bot.on('message', async msg => {
   const chatId = msg.chat.id;
-  sendMainMenu(chatId);
-});
 
-function sendMainMenu(chatId) {
-  const keyboard = {
-    reply_markup: {
-      keyboard: [
-        ['Курс валют', `Погода в ${city}`],
-      ],
-      resize_keyboard: true,
-      one_time_keyboard: false
-    }
-  };
-  bot.sendMessage(chatId, 'Вітаємо! Оберіть опцію:', keyboard);
-}
-
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Telegram Bot is running!');
-});
-
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
-
-bot.on('message', async (msg) => {
-  const chatId = msg.chat.id;
-  const messageText = msg.text;
-
-  switch (messageText) {
+  switch (msg.text) {
+    case 'Прогноз погоди':
+      bot.sendMessage(chatId, 'Виберіть інтервал:', weatherMenu);
+      break;
     case 'Курс валют':
-      sendCurrencyMenu(chatId);
-      break;
-    case `Погода в ${city}`:
-      sendWeatherMenu(chatId);
-      break;
-    case 'USD':
-    case 'EUR':
-      try {
-        const rates = await getExchangeRates(messageText);
-        bot.sendMessage(chatId, rates, { parse_mode: 'Markdown' });
-      } catch (error) {
-        bot.sendMessage(chatId, 'Вибачте, сталася помилка при отриманні курсу валют.');
-      }
+      bot.sendMessage(chatId, 'Виберіть валюту:', currencyMenu);
       break;
     case 'З інтервалом 3 години':
+      await sendWeatherForecast(chatId, 3);
+      break;
     case 'З інтервалом 6 годин':
-      const interval = messageText === 'З інтервалом 3 години' ? 3 : 6;
-      try {
-        const forecast = await getWeatherForecast(city, interval);
-        bot.sendMessage(chatId, forecast, { parse_mode: 'Markdown' });
-      } catch (error) {
-        bot.sendMessage(chatId, 'Вибачте, сталася помилка при отриманні прогнозу погоди.');
-      }
+      await sendWeatherForecast(chatId, 6);
+      break;
+    case 'Курс USD':
+      await sendExchangeRate(chatId, 'USD');
+      break;
+    case 'Курс EUR':
+      await sendExchangeRate(chatId, 'EUR');
       break;
     case 'Повернутися назад':
-      sendMainMenu(chatId);
+      bot.sendMessage(chatId, 'Виберіть опцію:', mainMenu);
       break;
   }
 });
 
-function sendCurrencyMenu(chatId) {
-  const keyboard = {
-    reply_markup: {
-      keyboard: [
-        ['USD', 'EUR'],
-        ['Повернутися назад']
-      ],
-      resize_keyboard: true,
-      one_time_keyboard: false
-    }
-  };
-  bot.sendMessage(chatId, 'Оберіть валюту:', keyboard);
-}
-
-function sendWeatherMenu(chatId) {
-  const keyboard = {
-    reply_markup: {
-      keyboard: [
-        ['З інтервалом 3 години', 'З інтервалом 6 годин'],
-        ['Повернутися назад']
-      ],
-      resize_keyboard: true,
-      one_time_keyboard: false
-    }
-  };
-  bot.sendMessage(chatId, 'Оберіть інтервал прогнозу:', keyboard);
-}
-
-const cache = new NodeCache({ stdTTL: 60 });
-
-async function getExchangeRates(currency) {
-  const cacheKey = `exchangeRates_${currency}`;
-  const cachedData = cache.get(cacheKey);
-
-  if (cachedData) {
-    return cachedData;
-  }
-
+async function sendWeatherForecast(chatId, interval) {
   try {
-    const [privatResponse, monoResponse] = await Promise.allSettled([
-      axios.get('https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11'),
-      axios.get('https://api.monobank.ua/bank/currency')
-    ]);
+    const response = await axios.get(
+      `http://api.openweathermap.org/data/2.5/forecast?q=${CITY}&appid=${WEATHER_API_KEY}&units=metric&lang=ua`
+    );
+    const forecast = response.data.list;
 
-    let privatRate, monoRate;
-
-    if (privatResponse.status === 'fulfilled') {
-      privatRate = privatResponse.value.data.find(rate => rate.ccy === currency);
-    }
-
-    if (monoResponse.status === 'fulfilled') {
-      monoRate = monoResponse.value.data.find(rate => 
-        (currency === 'USD' && rate.currencyCodeA === 840 && rate.currencyCodeB === 980) ||
-        (currency === 'EUR' && rate.currencyCodeA === 978 && rate.currencyCodeB === 980)
-      );
-    }
-
-    let message = `Курс ${currency}:\n\n`;
-
-    if (privatRate) {
-      message += `ПриватБанк:\nКупівля: ${parseFloat(privatRate.buy).toFixed(2)}\nПродаж: ${parseFloat(privatRate.sale).toFixed(2)}\n\n`;
-    } else {
-      message += `ПриватБанк: Дані недоступні\n\n`;
-    }
-
-    if (monoRate) {
-      message += `Монобанк:\nКупівля: ${monoRate.rateBuy.toFixed(2)}\nПродаж: ${monoRate.rateSell.toFixed(2)}`;
-    } else {
-      message += `Монобанк: Дані недоступні`;
-    }
-
-    cache.set(cacheKey, message);
-    return message;
-  } catch (error) {
-    console.error('Error fetching exchange rates:', error);
-    throw error;
-  }
-}
-
-async function getWeatherForecast(city, interval) {
-  const apiKey = process.env.WEATHER_API_KEY;
-  const url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&lang=ua`;
-
-  try {
-    const response = await axios.get(url);
-    const forecasts = response.data.list;
-
-    let message = `Погода в ${city}:\n\n`;
+    let message = `Погода в ${CITY}:\n`;
     let currentDate = '';
 
-    for (let i = 0; i < forecasts.length; i += interval / 3) {
-      const forecast = forecasts[i];
-      const date = new Date(forecast.dt * 1000);
-      const dayOfWeek = ['неділя', 'понеділок', 'вівторок', 'середа', 'четвер', 'пʼятниця', 'субота'][date.getDay()];
-      const formattedDate = `${dayOfWeek}, ${date.getDate()} ${['січня', 'лютого', 'березня', 'квітня', 'травня', 'червня', 'липня', 'серпня', 'вересня', 'жовтня', 'листопада', 'грудня'][date.getMonth()]}`;
+    forecast.forEach((item, index) => {
+      if (index % (interval / 3) === 0) {
+        const date = new Date(item.dt * 1000);
+        const formattedDate = date.toLocaleDateString('uk-UA', {
+          weekday: 'long',
+          day: 'numeric',
+          month: 'long',
+        });
+        const formattedTime = date.toLocaleTimeString('uk-UA', {
+          hour: '2-digit',
+          minute: '2-digit',
+        });
 
-      if (formattedDate !== currentDate) {
-        currentDate = formattedDate;
-        message += `\n${formattedDate}:\n`;
+        if (formattedDate !== currentDate) {
+          message += `\n${formattedDate}:\n`;
+          currentDate = formattedDate;
+        }
+
+        const temp = Math.round(item.main.temp);
+        const feelsLike = Math.round(item.main.feels_like);
+        const description = item.weather[0].description;
+
+        message += `${formattedTime}, ${temp} °С, відчувається як: ${feelsLike} °С, ${description}\n`;
       }
+    });
 
-      const time = date.toTimeString().slice(0, 5);
-      const temperature = Math.round(forecast.main.temp);
-      const feelsLike = Math.round(forecast.main.feels_like);
-      const description = forecast.weather[0].description;
-
-      message += `${time}, ${temperature} °С, відчувається як: ${feelsLike} °С, ${description}\n`;
-    }
-
-    return message;
+    bot.sendMessage(chatId, message);
   } catch (error) {
-    console.error('Error fetching weather data:', error);
-    throw error;
+    bot.sendMessage(chatId, 'Помилка при отриманні прогнозу погоди');
   }
 }
 
-console.log('Bot is running...');
+async function sendExchangeRate(chatId, currency) {
+  try {
+    const [privatResponse, monoResponse] = await Promise.all([
+      axios.get(
+        'https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5'
+      ),
+      axios.get('https://api.monobank.ua/bank/currency'),
+    ]);
+
+    const privatRate = privatResponse.data.find(item => item.ccy === currency);
+    const monoRate = monoResponse.data.find(
+      item =>
+        item.currencyCodeA === (currency === 'USD' ? 840 : 978) &&
+        item.currencyCodeB === 980
+    );
+
+    const message = `Курс ${currency}:
+ПриватБанк:
+Купівля: ${Number(privatRate.buy).toFixed(2)}
+Продаж: ${Number(privatRate.sale).toFixed(2)}
+Монобанк:
+Купівля: ${monoRate.rateBuy.toFixed(2)}
+Продаж: ${monoRate.rateSell.toFixed(2)}`;
+
+    bot.sendMessage(chatId, message);
+  } catch (error) {
+    console.error('Помилка при отриманні курсу валют:', error);
+    bot.sendMessage(chatId, 'Помилка при отриманні курсу валют');
+  }
+}
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Бот працює!');
+});
+
+app.listen(PORT, () => {
+  console.log(`Сервер запущено на порту ${PORT}`);
+});
