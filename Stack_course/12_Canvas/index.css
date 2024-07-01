@@ -1,0 +1,108 @@
+/* Скидання відступів, полів, розмірів шрифтів та лінійної висоти для всіх елементів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-size: 100%;
+    line-height: 1.6;
+  }
+  
+  /* Скидання стилів для типових елементів */
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, li, figure, figcaption, 
+  table, th, td, hr, fieldset, legend {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+body {
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    color: rgb(17, 102, 128);
+    font-size: larger;
+    font-weight: 700;
+}
+#sidebar {
+    width: 250px;
+    padding: 20px;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+#canvas {
+    flex: 1;
+    border: 3px solid rgb(17, 102, 128);
+    margin: 20px;
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.canvas-item {
+    position: absolute;
+    cursor: move;
+    width: 30%;
+    height: auto;
+}
+.canvas-text {
+    cursor: move;
+    font-size: 25px;
+}
+.image-thumbnail {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+#imageList{
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.photo-uploader {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px dashed black;
+    font-weight: 300;
+    background-color: rgb(176, 226, 226);
+}
+
+  #imageInput {
+    display: none; 
+  }
+
+.add-text-btn{
+    width: 100%;
+    height: 25px;
+    border: none;
+    background-color: rgb(176, 226, 226);
+    border: 1px solid black;
+}
+.text-input{
+    width: 100%;
+    height: 25px;
+    font-size: medium;
+    font-weight: 300;
+    padding: 0 2px 0 5px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Canvas</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="sidebar">
+      <h2>Upload image</h2>
+      <hr />
+      <br>
+      <label for="imageInput" class="photo-uploader">
+        Drop file or click to upload .png, .jpg
+      </label>
+      <input
+          type="file"
+          id="imageInput"
+          accept=".png, .jpg"
+        />
+        <br>
+      <h2>Assets</h2>
+      <hr />
+      <br>
+      <h3>Text</h3>
+      <input type="text" id="textInput" class="text-input"/>
+      <button onclick="addText()" class="add-text-btn">Add text</button>
+      <br><br>
+      <h3>Images</h3>
+      <div id="imageList"></div>
+    </div>
+    <div id="canvas"></div>
+    <script src="index.js" defer></script>
+  </body>
+</html>
