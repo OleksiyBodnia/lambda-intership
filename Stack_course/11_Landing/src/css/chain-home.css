@@ -1,0 +1,61 @@
+@media screen and (min-width: 375px) {
+  .chin-home-sid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 148px;
+  }
+  .chain-home-title {
+    color: var(--Text-Main);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+@media screen and (min-width: 768px) {
+  .chin-home-sid {
+    gap: 32px;
+    padding-bottom: 196px;
+  }
+  .chain-home-title {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .chin-home-sid {
+    padding-bottom: 305px;
+  }
+  .chain-home-title {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .chin-home-sid {
+    gap: 32px;
+    padding-bottom: 301px;
+  }
+  .chain-home-title {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .chin-home-sid {
+    padding-bottom: 299px;
+  }
+  .chain-home-title {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .chin-home-sid {
+    padding-bottom: 280px;
+  }
+  .chain-home-title {
+    font-size: 44px;
+  }
+}

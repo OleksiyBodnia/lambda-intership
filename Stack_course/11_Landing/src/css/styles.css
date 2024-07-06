@@ -1,0 +1,25 @@
+@import url("./reset.css");
+@import url("./header.css");
+@import url("./hero-section-home.css");
+@import url("./how-it-works-home.css");
+@import url("./smarter.css");
+@import url("./featured-home.css");
+@import url("./swiper-home.css");
+@import url("./chain-home.css");
+@import url("./form-home.css");
+@import url("./footer-home.css");
+
+:root {
+  --Text-Primary: #FF474D;
+  --Text-Second: #5C5C5C;
+  --Text-Main: #212121;
+  --Text-Placeholder: #BDBDBD;
+  --Text-White: #FFFFFF;
+  --inputs: #F3F4F5;
+  --BG-Grey: #F6F6F6;
+  --bg-black: #363636;
+  --bg-elem: #FB242B;
+  --Buttons-Primary: #FF474D;
+  --Shadow: #212121;
+  --Buttons-Text-Button-2: #212121;
+}

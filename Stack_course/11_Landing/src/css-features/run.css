@@ -1,0 +1,96 @@
+@media screen and (min-width: 375px) {
+  .run-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 42px;
+    padding-bottom: 671px;
+    background-image: url("../img-features/run/img.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 8px 0;
+  }
+  .run-title {
+    color: #212121;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 301px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .run-div {
+    padding-top: 51px;
+    padding-bottom: 876px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img-features/run/img768.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -8px 0;
+  }
+  .run-title {
+    font-size: 44px;
+    width: 414px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .run-div {
+    padding-top: 243px;
+    padding-bottom: 389px;
+    justify-content: end;
+    background-image: url("../img-features/run/img1024.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 7px -68px;
+  }
+  .run-title {
+    width: 229px;
+    text-align: start;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .run-div {
+    padding-top: 261px;
+    padding-bottom: 372px;
+    background-image: url("../img-features/run/img1280.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50px -36px;
+  }
+  .run-title {
+    width: 252px;
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .run-div {
+    padding-top: 255px;
+    padding-bottom: 349px;
+    background-image: url("../img-features/run/img1440.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 99px -31px;
+  }
+  .run-title {
+    width: 294px;
+    font-size: 56px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .run-div {
+    padding-top: 286px;
+    padding-bottom: 401px;
+    background-image: url("../img-features/run/img1920.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 124px -32px;
+  }
+  .run-title {
+    width: 446px;
+  }
+}

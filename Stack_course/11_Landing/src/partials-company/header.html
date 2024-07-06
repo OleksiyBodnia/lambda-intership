@@ -1,0 +1,123 @@
+<header class="header-sec">
+  <div class="container header-div">
+    <div style="display: flex; gap: 24px; position: relative;">
+      <img src="../img/header/logo@2x.png" alt="logotype" class="head-logo" />
+      <select class="language-selector" onchange="changeLanguage(value)">
+        <option value="en" selected>EN</option>
+        <option value="uk">UK</option>
+      </select>
+    </div>
+    <svg class="burger">
+      <use href="../icons/s.svg#icon-menu"></use>
+    </svg>
+
+    <nav class="header-nav-desk">
+      <ul class="list nav-header-list-desk">
+        <li class="nav-header-item-desk">
+          <a href="../index.html" class="nav-header-link-desk" id="nav-home-header"></a>
+        </li>
+        <li class="nav-header-item-desk">
+          <a
+            href="../features.html"
+            class="nav-header-link-desk"
+            id="nav-features-header"
+          ></a>
+        </li>
+        <li class="nav-header-item-desk">
+          <a href="" class="nav-header-link-desk" id="nav-company-header" style="color: var(--Text-Primary)"></a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="header-desk-gs-btn" id="get-started"></button>
+  </div>
+</header>
+<div class="mobile-menu">
+  <div class="header-top">
+    <img src="../img/header/logo@2x.png" alt="logotype" class="head-logo" />
+    <svg class="close">
+      <use href="../icons/s.svg#icon-close"></use>
+    </svg>
+  </div>
+  <nav>
+    <ul class="list navigation-menu">
+      <li class="link">
+        <a href="../index.html" id="nav-home-header" class="nav-link"></a>
+      </li>
+      <li class="link">
+        <a
+          href="../features.html"
+          id="nav-features-header"
+          class="nav-link"
+        ></a>
+      </li>
+      <li class="link">
+        <a href="" id="nav-company-header" class="nav-link" style="color: var(--Text-Primary)"></a>
+      </li>
+    </ul>
+  </nav>
+  <div class="header-tablet-part">
+    <button class="header-tablet-btn" id="get-started"></button>
+    <div class="social-net-tablet-list">
+      <img
+        src="../img/header/social1@2x.png"
+        alt="social icon"
+        class="social-tablet-icon-header"
+      />
+      <img
+        src="../img/header/social2@2x.png"
+        alt="social icon"
+        class="social-tablet-icon-header"
+      />
+    </div>
+  </div>
+</div>
+
+<script defer>
+  const burger = document.querySelector('.burger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const close = document.querySelector('.close');
+  const headerDeskGsBtn = document.querySelector('.header-desk-gs-btn');
+  const headerTabletBtn = document.querySelector('.header-tablet-btn');
+
+  headerDeskGsBtn.addEventListener('click', () => {
+    floatinfForm.style.display = 'block';
+  });
+
+  headerTabletBtn.addEventListener('click', () => {
+    floatinfForm.style.display = 'block';
+  });
+
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('closed');
+  });
+  close.addEventListener('click', () => {
+    mobileMenu.classList.toggle('closed');
+  });
+</script>
+<style>
+  .language-selector {
+    position: relative;
+    top: 3px;
+    border: none;
+    outline: none;
+    color: var(--Text-Main, #212121);
+    text-align: right;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26.646px; /* 166.537% */
+  }
+  .language-selector > option{
+    color: var(--Text-Main, #212121);
+    text-align: right;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26.646px; /* 166.537% */
+    border: none;
+    outline: none;
+  }
+</style>

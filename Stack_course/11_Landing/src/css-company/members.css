@@ -1,0 +1,54 @@
+@media screen and (min-width: 375px){
+  .members-div{
+    padding-bottom: 888px;
+    background-image: url("../img-company/members/img.png");
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 768px){
+  .members-div{
+    padding-bottom: 554px;
+    background-image: url("../img-company/members/img768.png");
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 1024px){
+  .members-div{
+    padding-bottom: 433px;
+    background-image: url("../img-company/members/img1024.png");
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 1280px){
+  .members-div{
+    padding-bottom: 490px;
+    background-image: url("../img-company/members/img1280.png");
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 1440px){
+  .members-div{
+    padding-bottom: 432px;
+    background-image: url("../img-company/members/img1440.png");
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 1920px){
+  .members-div{
+    padding-bottom: 425px;
+    background-image: url("../img-company/members/img1920.png");
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

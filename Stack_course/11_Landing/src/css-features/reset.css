@@ -1,0 +1,190 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  margin-bottom: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button,
+input {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  background-color: #FFF;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+body.lock {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .container {
+    min-width: 320px;
+    max-width: 375px;
+  }
+  body {
+    background-image: url('../img-features/manage/img.png'),
+    url("../img-features/supply/img.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+    background-position: 0 0, 0 4185px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    width: 375px;
+    padding: 0 16px;
+  }
+  body {
+    background-image: url('../img-features/manage/img.png'),
+    url("../img-features/supply/img.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+    background-position: 0 1998px, 0 4185px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 13px;
+  }
+  body {
+    background-image: url('../img-features/manage/img768.png'),
+    url("../img-features/supply/img768.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+    background-position: 0 1911px, 0 4062px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 1024px;
+    padding: 0 40px;
+  }
+  body {
+    background-image: url('../img-features/manage/img1024.png'),
+      url('../img-features/breeze/img1024.png'),
+      url("../img-features/supply/img1024.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: contain, 563px 792px, contain;
+    background-position: 0 1778px, 459px 2339px, 0 3211px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+    padding: 0 124px;
+  }
+  body {
+    background-image: url('../img-features/manage/img1280.png'),
+      url('../img-features/breeze/img1280.png'),
+      url("../img-features/supply/img1280.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: contain, 672px 792px, contain;
+    background-position: 30px 1846px, 606px 2407px, 0 3253px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+    padding: 0 124px;
+  }
+  body {
+    background-image: url('../img-features/manage/img1440.png'),
+      url('../img-features/breeze/img1440.png'),
+      url("../img-features/supply/img1440.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: contain, 725px 792px, contain;
+    background-position: 50px 1846px, 688px 2407px, 0 3257px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    width: 1920px;
+    padding: 0 304px;
+  }
+  body {
+    background-image: url('../img-features/manage/img1920.png'),
+      url('../img-features/breeze/img1440.png'),
+      url("../img-features/supply/img1920.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: contain, 725px 792px, contain;
+    background-position: 184px 1877px, 948px 2438px, 0 3257px;
+  }
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}

@@ -1,0 +1,106 @@
+<section class="smarter">
+  <div class="container smarter-div">
+    <div class="frst-smrt-div">
+      <h2 class="frst-smrt-div-title" id="smarter-title"></h2>
+      <div class="smrt-btn-div">
+        <button class="smrt-btn-one" id="smarter-btn-1"></button>
+        <button class="smrt-btn-two" id="smarter-btn-2"></button>
+        <button class="smrt-btn-three" id="smarter-btn-3"></button>
+      </div>
+      <div class="change-div-one">
+        <ul class="change-list">
+          <li class="change-item">
+            <img src="../img/smarter/rectangle.png" alt="item" />
+            <p class="change-item-text" id="change-div-one-line-1"></p>
+          </li>
+          <li class="change-item">
+            <img src="../img/smarter/rectangle.png" alt="item" />
+            <p class="change-item-text" id="change-div-one-line-2"></p>
+          </li>
+          <li class="change-item">
+            <img src="../img/smarter/rectangle.png" alt="item" />
+            <p class="change-item-text" id="change-div-one-line-3"></p>
+          </li>
+        </ul>
+      </div>
+      <div class="change-div-two">
+        <ul class="change-list">
+          <li class="change-item">
+            <img src="../img/smarter/rectangle.png" alt="item" />
+            <p class="change-item-text" id="change-div-two-line-1"></p>
+          </li>
+          <li class="change-item">
+            <img src="../img/smarter/rectangle.png" alt="item" />
+            <p class="change-item-text" id="change-div-two-line-2"></p>
+          </li>
+          <li class="change-item">
+            <img src="../img/smarter/rectangle.png" alt="item" />
+            <p class="change-item-text" id="change-div-two-line-3"></p>
+          </li>
+        </ul>
+      </div>
+      <div class="change-div-three">
+        <ul class="change-list">
+          <li class="change-item">
+            <img src="../img/smarter/rectangle.png" alt="item" />
+            <p class="change-item-text" id="change-div-three-line-1"></p>
+          </li>
+          <li class="change-item">
+            <img src="../img/smarter/rectangle.png" alt="item" />
+            <p class="change-item-text" id="change-div-three-line-2"></p>
+          </li>
+          <li class="change-item">
+            <img src="../img/smarter/rectangle.png" alt="item" />
+            <p class="change-item-text" id="change-div-three-line-3"></p>
+          </li>
+        </ul>
+      </div>
+      <a href="../features.html" class="more-features" id="more-feateres"></a>
+    </div>
+    <div class="scnd-smrt-div">
+      <!-- <picture >
+
+        <source
+          srcset="../img/smarter/displays@2x.png"
+          media="(min-width: 375px)"
+        />
+        <img src="../img/smarter/displays@2x.png" alt="Responsive Image" class="smrter-bottom-img"/>
+      </picture> -->
+    </div>
+  </div>
+</section>
+
+<script>
+  const btn1 = document.querySelector('.smrt-btn-one');
+  const btn2 = document.querySelector('.smrt-btn-two');
+  const btn3 = document.querySelector('.smrt-btn-three');
+
+  const changedivone = document.querySelector('.change-div-one');
+  const changedivtwo = document.querySelector('.change-div-two');
+  const changedivthree = document.querySelector('.change-div-three');
+
+  btn2.addEventListener('click', () => {
+    changedivone.style.display ="none";
+    changedivthree.style.display ="none";
+    changedivtwo.style.display ="flex";
+    btn1.style.border = "none";
+    btn3.style.border = "none";
+    btn2.style.border = "2px solid black"
+  })
+  btn3.addEventListener('click', () => {
+    changedivone.style.display ="none";
+    changedivthree.style.display ="flex";
+    changedivtwo.style.display ="none";
+    btn1.style.border = "none";
+    btn3.style.border = "2px solid black";
+    btn2.style.border = "none"
+  })
+  btn1.addEventListener('click', () => {
+    changedivone.style.display ="flex";
+    changedivthree.style.display ="none";
+    changedivtwo.style.display ="none";
+    btn1.style.border = "2px solid black";
+    btn3.style.border = "none";
+    btn2.style.border = "none"
+  })
+</script>

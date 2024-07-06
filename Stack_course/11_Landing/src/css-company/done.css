@@ -1,0 +1,281 @@
+@media screen and (min-width: 375px) {
+  .done-div {
+    padding-top: 40px;
+    padding-bottom: 1901px;
+    background-image: url('../img-company/done/img.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+    position: relative;
+  }
+  .done-title {
+    color: #212121;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .done-div1-title,
+  .done-div2-title,
+  .done-div3-title {
+    color: var(--Text-Main);
+    font-family: Gilroy;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 21px;
+  }
+  .done-div1-text1,
+  .done-div2-text1,
+  .done-div3-text1 {
+    color: var(--Text-Second, #5c5c5c);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.64; /* 164.286% */
+    padding-bottom: 17px;
+  }
+  .done-div1-text2,
+  .done-div2-text2,
+  .done-div3-text2 {
+    color: var(--Text-Second);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.64; /* 164.286% */
+    padding-bottom: 16px;
+  }
+  .done-div1-text3,
+  .done-div2-text3,
+  .done-div3-text3 {
+    color: var(--Text-Second);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.64; /* 164.286% */
+  }
+  .done-div1-text1,
+  .done-div2-text1,
+  .done-div3-text1,
+  .done-div1-text2,
+  .done-div2-text2,
+  .done-div3-text2,
+  .done-div1-text3,
+  .done-div2-text3,
+  .done-div3-text3 {
+    padding-left: 11px;
+  }
+  .done-div1 {
+    position: absolute;
+    top: 162px;
+    left: 40px;
+  }
+  .done-div2 {
+    position: absolute;
+    left: 40px;
+    top: 920px;
+  }
+  .done-div2-title,
+  .done-div2-text1,
+  .done-div2-text2,
+  .done-div2-text3 {
+    color: var(--Text-White, #fff);
+  }
+  .done-div3 {
+    position: absolute;
+    bottom: 198px;
+    left: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .done-div {
+    padding-top: 46px;
+    padding-bottom: 1120px;
+    background-image: url('../img-company/done/img768.png');
+    background-repeat: no-repeat;
+    background-position: 0 -80px;
+    background-size: cover;
+  }
+  .done-title {
+    font-size: 36px;
+  }
+  .done-div1-title,
+  .done-div2-title,
+  .done-div3-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .done-div1-text1,
+  .done-div2-text1,
+  .done-div3-text1,
+  .done-div1-text2,
+  .done-div2-text2,
+  .done-div3-text2,
+  .done-div1-text3,
+  .done-div2-text3,
+  .done-div3-text3 {
+    font-size: 16px;
+  }
+  .done-div1-text1,
+  .done-div2-text1,
+  .done-div3-text1 {
+    padding-bottom: 23px;
+  }
+  .done-div1-text2,
+  .done-div2-text2,
+  .done-div3-text2 {
+    padding-bottom: 23px;
+  }
+  .done-div1 {
+    top: 172px;
+  }
+  .done-div2 {
+    width: 296px;
+    top: 462px;
+  }
+  .done-div3 {
+    width: 296px;
+    bottom: 158px;
+    left: 431px;
+  }
+  .done-div2-text1,
+  .done-div2-text2,
+  .done-div2-text3,
+  .done-div3-text1,
+  .done-div3-text2,
+  .done-div3-text3 {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .done-div {
+    padding-top: 42px;
+    padding-bottom: 946px;
+    background-image: url('../img-company/done/img1024.png');
+    background-repeat: no-repeat;
+    background-position: 0 -65px;
+    background-size: cover;
+  }
+  .done-title {
+    font-size: 44px;
+  }
+  .done-div1 {
+    width: 420px;
+    top: 189px;
+  }
+  .done-div2 {
+    left: 407px;
+    top: 542px;
+    width: 216px;
+  }
+  .done-div3 {
+    bottom: 235px;
+    left: 725px;
+    width: 256px;
+  }
+  .done-div1-title,
+  .done-div2-title,
+  .done-div3-title {
+    margin-bottom: 21px;
+  }
+  .done-div1-text1,
+  .done-div2-text1,
+  .done-div3-text1 {
+    padding-bottom: 17px;
+  }
+  .done-div1-text2,
+  .done-div2-text2,
+  .done-div3-text2 {
+    padding-bottom: 17px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .done-div {
+    padding-top: 48px;
+    padding-bottom: 996px;
+    background-image: url('../img-company/done/img1280.png');
+    background-repeat: no-repeat;
+    background-position: 0 -65px;
+    background-size: cover;
+  }
+  .done-div1-title {
+    font-size: 32px;
+  }
+  .done-div1-text1,
+  .done-div1-text2,
+  .done-div2-text1,
+  .done-div2-text2,
+  .done-div3-text1,
+  .done-div3-text2 {
+    padding-bottom: 21px;
+  }
+  .done-div1 {
+    width: 464px;
+    left: 128px;
+    top: 223px;
+  }
+  .done-div2 {
+    width: 248px;
+    left: 534px;
+    top: 632px;
+  }
+  .done-div3 {
+    bottom: 197px;
+    left: 900px;
+    width: 278px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .done-div {
+    background-image: url('../img-company/done/img1440.png');
+    background-repeat: no-repeat;
+    background-position: 0 -65px;
+    background-size: cover;
+  }
+  .done-div1 {
+    left: 132px;
+    top: 227px;
+  }
+  .done-div2 {
+    width: 293px;
+    left: 550px;
+    top: 610px;
+  }
+  .done-div3 {
+    bottom: 256px;
+    left: 968px;
+    width: 353px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .done-div {
+    background-image: url('../img-company/done/img1920.png');
+    background-repeat: no-repeat;
+    background-position: 0 -65px;
+    background-size: cover;
+  }
+  .done-title {
+    font-size: 48px;
+  }
+  .done-div1-title,
+  .done-div2-title,
+  .done-div3-title{
+    font-size: 36px;
+  }
+  .done-div1 {
+    left: 309px;
+    top: 218px;
+  }
+  .done-div2 {
+    left: 804px;
+  }
+  .done-div3 {
+    left: 1263px;
+  }
+}

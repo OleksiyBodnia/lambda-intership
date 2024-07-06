@@ -1,0 +1,191 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  margin-bottom: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button,
+input {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  background-color: #FFF;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+body.lock {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .container {
+    min-width: 320px;
+    max-width: 375px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    width: 375px;
+    padding: 0 16px;
+  }
+  body {
+    background-image: url('../img/how-it-works-home/bg-images/rectangle@2x.png'),
+    url('../img/chain-home/bg/img.png'),
+    url('../img/chain-home/bg/img2.png'),
+    url('../img/chain-home/bg/img3.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: contain, contain, contain, contain;
+    background-position: 0 321px, 0 2850px, 0 3220px, 0 5922px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 13px;
+  }
+  body {
+    background-image: none;
+    background-image: url('../img/how-it-works-home/bg-images/rectangle768@2x.png'),
+    url("../img/chain-home/bg/img-tablet.png"),
+    url("../img/form-home/img768.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: contain, contain, contain;
+    background-position: 0 325px, 0 3683px, 0 6071px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 1024px;
+    padding: 0 40px;
+  }
+  body {
+    background-image: url('../img/how-it-works-home/bg-images/rectangle1024@2x.png'),
+    url('../img/smarter/displays768@2x.png'),
+    url('../img/chain-home/bg/img1024.png'),
+    url('../img/form-home/img1024.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: contain, 768px 821px, contain, contain;
+    background-position: 0 0, 426px 1596px, 0 2490px, 0 4456px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+    padding: 0 124px;
+  }
+  body {
+    background-image: url('../img/how-it-works-home/bg-images/rectangle1280@2x.png'),
+    url('../img/smarter/displays768@2x.png'),
+    url('../img/chain-home/bg/img1280.png'),
+    url('../img/form-home/img1280.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: contain, 768px 821px, contain, contain;
+    background-position: 0 0, 555px 1596px, 0 2458px,0 4303px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+    padding: 0 124px;
+  }
+  body {
+    background-image: url('../img/how-it-works-home/bg-images/rectangle1440@2x.png'),
+    url('../img/smarter/displays768@2x.png'),
+    url('../img/chain-home/bg/img1440px.png'),
+    url('../img/form-home/img1440.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: contain,768px 821px, contain, contain;
+    background-position: 0 0, 693px 1596px, 0 2432px, 0 4290px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    width: 1920px;
+    padding: 0 304px;
+  }
+  body {
+    background-image: url('../img/how-it-works-home/bg-images/rectangle1920@2x.png'),
+    url('../img/smarter/displays768@2x.png'),
+    url('../img/chain-home/bg/img1920.png'),
+    url('../img/form-home/img1920.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: contain, 768px 821px, contain, contain;
+    background-position: 0 0, 964px 1596px, 0 2450px, 0 4290px;
+  }
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}

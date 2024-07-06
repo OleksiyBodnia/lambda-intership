@@ -1,0 +1,186 @@
+@media screen and (min-width: 375px) {
+  .smarter-div {
+    padding-bottom: 814px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('../img/smarter/displays@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 354px;
+  }
+  .frst-smrt-div-title {
+    color: var(--Text-Main);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 24px;
+  }
+  .smrt-btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .smrt-btn-one,
+  .smrt-btn-two,
+  .smrt-btn-three {
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: #212121;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 11px 24px 11px 24px;
+    border: 2px solid black;
+  }
+  .smrt-btn-two,
+  .smrt-btn-three {
+    border: none;
+  }
+  .change-item {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 13px;
+  }
+  .change-item-text {
+    color: #212121;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+  }
+  .change-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    gap: 8px;
+  }
+  .change-div-two,
+  .change-div-three {
+    display: none;
+  }
+  .more-features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    color: var(--Text-White);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 180px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: var(--Buttons-Primary);
+    border: none;
+    margin-bottom: 42px;
+  }
+  .more-features:hover,
+  .more-features:focus {
+    background-color: rgba(255, 71, 77, 0.8);
+  }
+  .frst-smrt-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .smarter-div {
+    padding-bottom: 991px;
+    background-image: url('../img/smarter/displays768@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 354px;
+  }
+  .frst-smrt-div-title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 383px;
+  }
+  .smrt-btn-one {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .change-item-text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.43; /* 143.75% */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .smarter-div {
+    padding-bottom: 314px;
+    background-image: none;
+    align-items: start;
+  }
+  .frst-smrt-div {
+    align-items: start;
+  }
+  .frst-smrt-div-title {
+    text-align: start;
+  }
+  .change-list {
+    width: 389px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .smarter-div {
+    padding-bottom: 330px;
+  }
+  .frst-smrt-div-titleP {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+  .smarter-div{
+    padding-bottom: 329px;
+  }
+  .change-list {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .smarter-div{
+    padding-bottom: 314px;
+  }
+  .frst-smrt-div-title{
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .frst-smrt-div-title{
+    width: 600px;
+  }
+}

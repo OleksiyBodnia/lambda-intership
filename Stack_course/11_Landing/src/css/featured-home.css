@@ -1,0 +1,115 @@
+@media screen and (min-width: 375px) {
+  .feat-home-div {
+    padding-bottom: 306px;
+  }
+  .feat-home-img {
+    height: 28px;
+  }
+  .feat-home-title {
+    position: relative;
+    color: var(--Text-Main);
+    font-family: Gilroy;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 57px;
+  }
+  .feat-home-title::after {
+    content: ' ';
+    background: #d2d2d2;
+    width: 253px;
+    height: 1px;
+    flex-shrink: 0;
+    position: absolute;
+    bottom: -24px;
+    left: 63px;
+  }
+  .feat-home-img-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .feat-home-div {
+    padding-bottom: 322px;
+  }
+  .feat-home-title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 49px;
+  }
+  .feat-home-title::after {
+    width: 336px;
+    height: 1px;
+    flex-shrink: 0;
+    left: 204px;
+    bottom: -16px;
+  }
+  .feat-home-img-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 180px;
+    row-gap: 60px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .feat-home-div {
+    padding-bottom: 310px;
+  }
+  .feat-home-title::after {
+    width: 666px;
+    height: 1px;
+    flex-shrink: 0;
+    left: 140px;
+    bottom: -19px;
+  }
+  .feat-home-title {
+    margin-bottom: 51px;
+  }
+  .feat-home-img-list {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .feat-home-div {
+    padding-bottom: 317px;
+  }
+  .feat-home-title::after {
+    left: 186px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .feat-home-div {
+    padding-bottom: 334px;
+  }
+  .feat-home-title::after {
+    left: 264px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .feat-home-div {
+    padding-bottom: 321px;
+  }
+  .feat-home-title::after {
+    left: 310px;
+  }
+  .feat-home-title {
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}

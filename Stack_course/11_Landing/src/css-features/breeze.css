@@ -1,0 +1,92 @@
+@media screen and (min-width: 375px) {
+  .breeze-div {
+    padding-bottom: 725px;
+    background-image: url("../img-features/breeze/img.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 229px;
+  }
+  .breeze-title {
+    color: var(--Text-Main);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 12px;
+  }
+  .breeze-text {
+    color: var(--Text-Second);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px; /* 164.286% */
+  }
+}
+@media screen and (min-width: 768px) {
+  .breeze-div {
+    padding-bottom: 960px;
+    background-image: url("../img-features/breeze/img768.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 208px;
+  }
+  .breeze-title {
+    font-size: 36px;
+    margin-bottom: 13px;
+  }
+  .breeze-text {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .breeze-div {
+    padding-bottom: 423px;
+    background-image: none;
+  }
+  .breeze-title {
+    text-align: start;
+    width: 374px;
+    margin-bottom: 16px;
+  }
+  .breeze-text {
+    width: 340px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .breeze-div {
+    padding-bottom: 428px;
+  }
+  .breeze-title {
+    font-size: 40px;
+    width: 420px;
+  }
+  .breeze-text {
+    width: 440px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .breeze-div {
+    padding-bottom: 423px;
+  }
+  .breeze-title {
+    font-size: 44px;
+    width: 458px;
+  }
+  .breeze-text {
+    width: 440px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .breeze-div {
+    padding-bottom: 391px;
+  }
+  .breeze-title {
+  }
+  .breeze-text {
+    font-size: 18px;
+    width: 510px;
+  }
+}

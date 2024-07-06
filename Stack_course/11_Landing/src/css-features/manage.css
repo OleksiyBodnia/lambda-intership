@@ -1,0 +1,82 @@
+@media screen and (min-width: 375px) {
+  .manage-div {
+    padding-bottom: 1178px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .manage-title {
+    color: #212121;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+  .manage-text{
+    color: #727272;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+  }
+}
+@media screen and (min-width: 768px) {
+  .manage-div {
+    padding-bottom: 984px;
+  }
+  .manage-text{
+    width: 330px;
+  }
+
+}
+@media screen and (min-width: 1024px) {
+  .manage-div {
+    padding-bottom: 721px;
+    align-items: start;
+  }
+  .manage-title{
+    margin-left: 147px;
+  }
+  .manage-text{
+    margin-left: 77px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .manage-div {
+    padding-bottom: 727px;
+  }
+  .manage-title{
+    margin-left: 132px;
+  }
+  .manage-text{
+    margin-left: 52px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .manage-div {
+    padding-bottom: 722px;
+  }
+  .manage-title{
+    margin-left: 172px;
+  }
+  .manage-text{
+    margin-left: 92px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .manage-div {
+    padding-bottom: 714px;
+  }
+  .manage-title{
+    margin-left: 186px;
+  }
+  .manage-text{
+    margin-left: 120px;
+  }
+}

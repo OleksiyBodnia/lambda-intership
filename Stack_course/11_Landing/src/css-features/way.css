@@ -1,0 +1,140 @@
+@media screen and (min-width: 375px) {
+  .way-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 49px;
+    padding-bottom: 48px;
+    background-image: url("../img-features/way/img.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+  }
+  .way-text {
+    color: var(--Text-Second);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .way-title {
+    color: var(--Text-Main);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 9px;
+    margin-bottom: 24px;
+  }
+  .way-btn {
+    width: 188px;
+    height: 48px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
+    background: var(--Buttons-Primary,);
+    color: var(--Text-White);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    transition: background 0.3s ease-in-out;
+  }
+  .way-btn:hover,
+  .way-btn:focus{
+    background: rgba(255, 71, 77, 0.80)
+  }
+}
+@media screen and (min-width: 768px) {
+  .way-div {
+    background-image: url("../img-features/way/img768.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+  }
+  .way-text {
+    font-size: 16px;
+  }
+  .way-title {
+    font-size: 32px;
+    width: 463px;
+  }
+  .way-btn {
+  }
+}
+@media screen and (min-width: 1024px) {
+  .way-div {
+    background-image: url("../img-features/way/img1024.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+  }
+  .way-text {
+    font-size: 18px;
+  }
+  .way-title {
+    margin-top: 10px;
+    font-size: 32px;
+  }
+  .way-btn {
+  }
+}
+@media screen and (min-width: 1280px) {
+  .way-div {
+    padding-bottom: 49px;
+    background-image: url("../img-features/way/img1280.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+  }
+  .way-text {
+    font-size: 20px;
+  }
+  .way-title {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+  .way-btn {
+  }
+}
+@media screen and (min-width: 1440px) {
+  .way-div {
+    background-image: url("../img-features/way/img1440.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+  }
+  .way-text {
+  }
+  .way-title {
+  }
+  .way-btn {
+  }
+}
+@media screen and (min-width: 1920px) {
+  .way-div {
+    padding-top: 50px;
+    padding-bottom: 48px;
+    background-image: url("../img-features/way/img1920.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+  }
+  .way-text {
+    font-size: 24px;
+  }
+  .way-title {
+    width: 556px;
+    font-size: 44px;
+  }
+  .way-btn {
+  }
+}

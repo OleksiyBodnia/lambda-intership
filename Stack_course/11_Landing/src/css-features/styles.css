@@ -1,0 +1,31 @@
+@import url("./reset.css");
+@import url("./header.css");
+@import url("./hero.css");
+@import url("./supercharge.css");
+@import url("./manage.css");
+@import url("./breeze.css");
+@import url("./supply.css");
+@import url("./send.css");
+@import url("./make.css");
+@import url("./get.css");
+@import url("./run.css");
+@import url("./way.css");
+@import url("./faq.css");
+@import url("./form.css");
+
+@import url("./footer-home.css");
+
+:root {
+  --Text-Primary: #FF474D;
+  --Text-Second: #5C5C5C;
+  --Text-Main: #212121;
+  --Text-Placeholder: #BDBDBD;
+  --Text-White: #FFFFFF;
+  --inputs: #F3F4F5;
+  --BG-Grey: #F6F6F6;
+  --bg-black: #363636;
+  --bg-elem: #FB242B;
+  --Buttons-Primary: #FF474D;
+  --Shadow: #212121;
+  --Buttons-Text-Button-2: #212121;
+}

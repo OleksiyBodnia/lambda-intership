@@ -1,0 +1,51 @@
+<section class="fag-section">
+  <div class="container faq-div">
+    <h2 class="faq-title">FAQ</h2>
+    <div class="accordion-div">
+      <button class="accordion" id="accordion-one"></button>
+      <div class="panel">
+        <p class="accordion-text" id="accordion-text-one"></p>
+      </div>
+    </div>
+    <div class="accordion-div">
+      <button class="accordion" id="accordion-two"></button>
+      <div class="panel">
+        <p class="accordion-text" id="accordion-text-two"></p>
+      </div>
+    </div>
+    <div class="accordion-div">
+      <button class="accordion" id="accordion-three"></button>
+      <div class="panel">
+        <p class="accordion-text" id="accordion-text-three"></p>
+      </div>
+    </div>
+    <div class="accordion-div">
+      <button class="accordion" id="accordion-four"></button>
+      <div class="panel">
+        <p class="accordion-text" id="accordion-text-four"></p>
+      </div>
+    </div>
+    <div class="accordion-div">
+      <button class="accordion" id="accordion-five"></button>
+      <div class="panel">
+        <p class="accordion-text" id="accordion-text-five"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  var acc = document.getElementsByClassName('accordion');
+
+  for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener('click', function () {
+      this.classList.toggle('active');
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  }
+</script>

@@ -1,0 +1,165 @@
+@media screen and (min-width: 375px) {
+  .hero-home-div {
+    padding-top: 78px;
+    padding-bottom: 552px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('../img/hero-home/bg-image/starts@2x.png');
+    background-repeat: no-repeat;
+    background-size: 58px 41px;
+    background-position: 27px 46px;
+  }
+  .hero-home-div-title {
+    color: var(--Text-Main, #212121);
+    font-family: Gilroy;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 280px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .hero-home-div-text {
+    color: var(--Text-Second, #5c5c5c);
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.57; /* 157.143% */
+    width: 333px;
+    margin-bottom: 32px;
+  }
+  .hero-home-div-btn {
+    width: 188px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: var(--Buttons-Primary);
+    color: var(--Text-White);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+    transition: background 0.3s ease-in-out;
+    margin-bottom: 12px;
+  }
+  .hero-home-div-btn:hover {
+    background: rgba(255, 71, 77, 0.8);
+  }
+  .hero-home-div-sml-text {
+    color: var(--Text-Second);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .sml-txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-home-div {
+    padding-top: 64px;
+    padding-bottom: 784px;
+    background-image: url('../img/hero-home/bg-image/starts@2x.png');
+    background-repeat: no-repeat;
+    background-size: 58px 41px;
+    background-position: 206px 38px;
+  }
+  .hero-home-div-title {
+    font-size: 32px;
+    width: 333px;
+  }
+  .hero-home-div-text {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero-home-div {
+    align-items: start;
+    padding-top: 197px;
+    padding-bottom: 394px;
+    background-image: none;
+    background-image: url('../img/hero-home/bg-image/starts@2x.png');
+    background-repeat: no-repeat;
+    background-size: 58px 41px;
+    background-position: 17px 164px;
+  }
+  .hero-home-div-title {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.36; /* 136.111% */
+    text-align: left;
+    width: 373px;
+    margin-bottom: 15px;
+  }
+  .hero-home-div-text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5; /* 150% */
+    text-align: left;
+    margin-bottom: 32px;
+  }
+  .sml-txt {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-home-div {
+    padding-top: 189px;
+    padding-bottom: 379px;
+    background-image: url('../img/hero-home/bg-image/starts@2x.png');
+    background-repeat: no-repeat;
+    background-size: 58px 41px;
+    background-position: 104px 164px;
+  }
+  .hero-home-div-title {
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 11px;
+    width: 427px;
+  }
+  .hero-home-div-text {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.33; /* 133.333% */
+    width: 369px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero-home-div {
+    background-image: url('../img/hero-home/bg-image/starts@2x.png');
+    background-repeat: no-repeat;
+    background-size: 58px 41px;
+    background-position: 102px 164px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .hero-home-div {
+    padding-top: 190px;
+    padding-bottom: 355px;
+    background-image: url('../img/hero-home/bg-image/starts@2x.png');
+    background-repeat: no-repeat;
+    background-size: 58px 41px;
+    background-position: 297px 164px;
+  }
+}

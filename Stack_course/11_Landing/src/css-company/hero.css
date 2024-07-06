@@ -1,0 +1,101 @@
+@media screen and (min-width: 375px) {
+  .hero-div {
+    padding-top: 81px;
+    padding-bottom: 540px;
+    background-image: url("../img-company/hero/img.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 3px 13px;
+  }
+  .hero-title {
+    color: #212121;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 17px;
+  }
+  .hero-text {
+    color: var(--Text-Second);
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.33; /* 133.333% */
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-div {
+    padding-top: 79px;
+    padding-bottom: 840px;
+    background-image: url("../img-company/hero/img768.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 123px 9px;
+  }
+  .hero-title {
+    font-size: 48px;
+  }
+  .hero-text {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero-div {
+    padding-top: 81px;
+    padding-bottom: 38px;
+    background-image: url("../img-company/hero/img1024.png");
+    background-repeat: no-repeat;
+    background-size: 89px 63px;
+    background-position: 270px 36px;
+  }
+  .hero-title {
+  }
+  .hero-text {
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-div {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    background-image: url("../img-company/hero/img1280.png");
+    background-repeat: no-repeat;
+    background-size: 89px 63px;
+    background-position: 374px 36px;
+  }
+  .hero-title {
+    font-size: 56px;
+    margin-bottom: 15px;
+  }
+  .hero-text {
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero-div {
+    background-image: url("../img-company/hero/img1440.png");
+    background-repeat: no-repeat;
+    background-size: 89px 63px;
+    background-position: 453px 36px;
+  }
+  .hero-title {
+  }
+  .hero-text {
+  }
+}
+@media screen and (min-width: 1920px) {
+  .hero-div {
+    background-image: url("../img-company/hero/img1920.png");
+    background-repeat: no-repeat;
+    background-size: 89px 63px;
+    background-position: 670px 36px;
+  }
+  .hero-title {
+    font-size: 60px;
+  }
+  .hero-text {
+    font-size: 20px;
+  }
+}

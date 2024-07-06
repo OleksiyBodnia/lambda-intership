@@ -1,0 +1,186 @@
+@media screen and (min-width: 375px) {
+  .contact-div {
+    padding-bottom: 120px;
+    background-image: url('../img-company/contact/img.png');
+    background-repeat: no-repeat;
+    background-position: 0 87px;
+    background-size: 359px;
+  }
+  .contact-title {
+    color: var(--Text-Main);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 41px;
+  }
+  .contact-item-title {
+    color: #212121;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 16px;
+    width: 247px;
+  }
+  .contact-item-text {
+    color: var(--Text-Second);
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5; /* 21px */
+    margin-bottom: 32px;
+    width: 247px;
+  }
+  .contact-item-btn {
+    width: 188px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    border: 1px solid #d2d2d2;
+    background-color: transparent;
+    color: var(--Text-Main);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    transition: background 0.3s ease-in-out;
+  }
+  .contact-item-btn:hover,
+  .contact-item-btn:focus {
+    background: #e0e0e1;
+  }
+  .contact-item-div {
+    width: 343px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 49px;
+    padding-bottom: 48px;
+  }
+  .contact-items-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+  #contact-item-title2,
+  #contact-item-text2 {
+    color: #fff;
+  }
+  #contact-item-btn2 {
+    background: #fff;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact-div {
+    padding-bottom: 112px;
+    background-image: url('../img-company/contact/img768.png');
+    background-repeat: no-repeat;
+    background-position: 0 87px;
+    background-size: 752px;
+  }
+  .contact-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  .contact-item-title {
+    width: 100%;
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  .contact-item-text {
+    width: 566px;
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .contact-div {
+    padding-bottom: 129px;
+    background-image: url('../img-company/contact/img1024.png');
+    background-repeat: no-repeat;
+    background-position: 0 87px;
+    background-size: 983px;
+  }
+  .contact-title {
+    font-size: 44px;
+    margin-bottom: 49px;
+  }
+  .contact-item-div {
+    width: 289px;
+    padding-top: 81px;
+    padding-bottom: 80px;
+  }
+  .contact-items-div {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .contact-item-title {
+    margin-bottom: 17px;
+    font-size: 28px;
+    width: 161px;
+  }
+  .contact-item-text {
+    margin-bottom: 32px;
+    width: 202px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .contact-div {
+    background-image: url('../img-company/contact/img1280.png');
+    background-repeat: no-repeat;
+    background-position: 0 87px;
+    background-size: 1156px;
+  }
+  .contact-item-text {
+    font-size: 16px;
+  }
+  .contact-item-div {
+    width: 328px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contact-div {
+    background-image: url('../img-company/contact/img1440.png');
+    background-repeat: no-repeat;
+    background-position: 0 87px;
+    background-size: 1317px;
+  }
+  .contact-item-div{
+    width: 382px;
+  }
+  .contact-item-text{
+    width: 286px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .contact-div {
+    background-image: url('../img-company/contact/img1920.png');
+    background-repeat: no-repeat;
+    background-position: 168px 110px;
+    background-size: 1450px;
+  }
+  .contact-title {
+    font-size: 48px;
+  }
+  .contact-item-title{
+    font-size: 32px;
+  }
+  .contact-item-text{
+    font-size: 18px;
+  }
+  .contact-item-div{
+    width: 422px;
+  }
+}

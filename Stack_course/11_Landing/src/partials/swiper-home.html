@@ -1,0 +1,86 @@
+<section class="swiper-home-section">
+  <div class="container swiper-home-div">
+    <h2 class="swiper-home-title" id="swiper-home-title"></h2>
+
+    <swiper-container class="mySwiper" init="false">
+      <swiper-slide class="slide-1"
+        ><p class="swiper-text" id="swiper-home-slide-one"></p>
+        <img
+          src="../img/swiper-home/slide1@2x.png"
+          alt="company logo"
+          class="swiper-h-img"
+      /></swiper-slide>
+      <swiper-slide class="slide-2"
+        ><p class="swiper-text" id="swiper-home-slide-two"></p>
+        <img
+          src="../img/swiper-home/slide2@2x.png"
+          alt="company logo"
+          class="swiper-h-img"
+      /></swiper-slide>
+      <swiper-slide class="slide-3"
+        ><p class="swiper-text" id="swiper-home-slide-three"></p>
+        <img
+          src="../img/swiper-home/slide3@2x.png"
+          alt="company logo"
+          class="swiper-h-img"
+      /></swiper-slide>
+      <swiper-slide class="slide-4"
+        ><p class="swiper-text" id="swiper-home-slide-four"></p>
+        <img
+          src="../img/swiper-home/slide4@2x.png"
+          alt="company logo"
+          class="swiper-h-img"
+      /></swiper-slide>
+    </swiper-container>
+
+    <div class="nav-btn-menu">
+      <div class="swiper-button-prev"><img src="../img/swiper-home/btn-left.png" alt="button"></div>
+    <div class="swiper-button-next"><img src="../img/swiper-home/btn-right.png" alt="button"></div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+<script>
+  const swiperEl = document.querySelector('swiper-container');
+
+  const params = {
+    injectStyles: [
+      `
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+        background: #5C5C5C;
+        border-radius: 0;
+        transform: rotate(45deg); /* Rotate to make it a diamond shape */
+      }
+
+      .swiper-pagination-bullet-active {
+        background: #FFF;
+      }
+        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+        margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 10px);
+        }
+      .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, 0px);}
+      `,
+    ],
+    pagination: {
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<span class="${className}"> </span>`;
+      },
+
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+  };
+
+  Object.assign(swiperEl, params);
+
+  swiperEl.initialize();
+</script>

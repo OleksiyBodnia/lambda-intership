@@ -1,0 +1,86 @@
+<div class="form-home-form-div">
+  <form class="form-home">
+    <h3 class="form-home-form-title" id="form-home-form-title"></h3>
+    <label for="name" id="form-home-form-label-one" class="form-lbl"></label>
+    <input
+      type="text"
+      class="form-home-input"
+      id="name"
+      placeholder="John Appleseed"
+      required
+    />
+    <label
+      for="bus-name"
+      id="form-home-form-label-two"
+      class="form-lbl"
+    ></label>
+    <input
+      type="text"
+      class="form-home-input"
+      id="bus-name"
+      placeholder="Burgers &Boba (Singapore)"
+      required
+    />
+    <label
+      for="number"
+      id="form-home-form-label-three"
+      class="form-lbl"
+    ></label>
+    <input
+      type="number"
+      class="form-home-input"
+      id="number"
+      placeholder="65 9123 4567"
+      required
+    />
+    <button type="submit" id="form-btn" class="form-btn"></button>
+    <p class="form-home-promise" id="form-home-promise"></p>
+  </form>
+  <svg
+    class="close-btn"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path
+      d="M24 18C24 21.3137 21.3137 24 18 24L6 24C2.68629 24 0 21.3137 0 18L0 6C0 2.68629 2.68629 0 6 0L18 0C21.3137 0 24 2.68629 24 6L24 18Z"
+      fill="#F3F4F5"
+    />
+    <path
+      d="M13.0994 12.0001L17.7719 7.32729C18.076 7.02334 18.076 6.53191 17.7719 6.22796C17.468 5.92401 16.9766 5.92401 16.6726 6.22796L11.9999 10.9008L7.32737 6.22796C7.02329 5.92401 6.532 5.92401 6.22806 6.22796C5.92398 6.53191 5.92398 7.02334 6.22806 7.32729L10.9006 12.0001L6.22806 16.6729C5.92398 16.9768 5.92398 17.4683 6.22806 17.7722C6.37953 17.9238 6.5787 18 6.77772 18C6.97674 18 7.17576 17.9238 7.32737 17.7722L11.9999 13.0994L16.6726 17.7722C16.8243 17.9238 17.0233 18 17.2223 18C17.4213 18 17.6203 17.9238 17.7719 17.7722C18.076 17.4683 18.076 16.9768 17.7719 16.6729L13.0994 12.0001Z"
+      fill="#212121"
+    />
+  </svg>
+</div>
+<div class="blur"></div>
+
+<script defer>
+  const floatinfForm = document.querySelector(".floatinf-form");
+  const crose = document.querySelector(".close-btn")
+  const form = document.querySelector('.form-home');
+  const btn = document.querySelector('.form-btn');
+
+  crose.addEventListener('click', () => {
+    floatinfForm.style.display = "none"
+  })
+
+  btn.addEventListener('click', (e) => {
+    e.preventDefault()
+    form.innerHTML = '';
+    form.style.alignItems = "center"
+    form.innerHTML = `
+          <h2 class="thanks" id="thanks">Thank you!</h2>
+          <img class="thanks-img" src="../img-features/Group.png" alt="thank you">
+          <p id="get-in-touch" class="get-in-touch">We will get in touch with you soon.</p>
+          <button class="close-form-btn-thank" id="close-form-btn-thank" type="submit">Close</button>`;
+
+    // Add event listener to the new close button
+    document
+      .getElementById('close-form-btn-thank')
+      .addEventListener('click', function () {
+        floatinfForm.style.display = "none"
+      });
+  });
+</script>

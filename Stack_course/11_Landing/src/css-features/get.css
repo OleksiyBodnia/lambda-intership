@@ -1,0 +1,126 @@
+@media screen and (min-width: 375px) {
+  .get-div {
+    padding-bottom: 78px;
+  }
+  .get-f-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .get-title {
+    color: var(--Text-Main, #212121);
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 12px;
+  }
+  .get-text {
+    color: var(--Text-Second, #5C5C5C);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.64; /* 164.286% */
+  }
+  .get-img {
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .get-div {
+    padding-bottom: 85px;
+  }
+  .get-f-div {
+  }
+  .get-title {
+    width: 382px;
+    font-size: 36px;
+
+  }
+  .get-text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.43; /* 143.75% */
+  }
+  .get-img {
+    margin-top: 24px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .get-div {
+    padding-bottom: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .get-f-div {
+    width: 336px;
+  }
+  .get-title {
+    text-align: start;
+    width: 100%;
+  }
+  .get-text {
+  }
+  .get-img {
+    width: 612px;
+    position: relative;
+    right: -38px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .get-div {
+  }
+  .get-f-div {
+    width: 440px;
+  }
+  .get-title {
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
+  .get-text {
+  }
+  .get-img {
+    width: 672px;
+    right: -123px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .get-div {
+  }
+  .get-f-div {
+    width: 484px;
+  }
+  .get-title {
+  }
+  .get-text {
+  }
+  .get-img {
+  }
+}
+@media screen and (min-width: 1920px) {
+  .get-div {
+  }
+  .get-f-div {
+  }
+  .get-title {
+    font-size: 44px;
+  }
+  .get-text {
+    font-size: 18px;
+  }
+  .get-img {
+  }
+}
+
+
+
+
+
