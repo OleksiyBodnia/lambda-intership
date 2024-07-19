@@ -5,8 +5,29 @@ let offsetX, offsetY;
 
 document
   .getElementById('imageInput')
-  .addEventListener('change', function (event) {
-    const file = event.target.files[0];
+  .addEventListener('change', handleFiles);
+
+const uploaderLabel = document.querySelector('.photo-uploader');
+
+uploaderLabel.addEventListener('dragover', (event) => {
+  event.preventDefault();
+  uploaderLabel.classList.add('dragover');
+});
+
+uploaderLabel.addEventListener('dragleave', () => {
+  uploaderLabel.classList.remove('dragover');
+});
+
+uploaderLabel.addEventListener('drop', (event) => {
+  event.preventDefault();
+  uploaderLabel.classList.remove('dragover');
+  const files = event.dataTransfer.files;
+  handleFiles({ target: { files } });
+});
+
+function handleFiles(event) {
+  const files = event.target.files;
+  for (const file of files) {
     const reader = new FileReader();
     reader.onload = function (e) {
       const img = document.createElement('img');
@@ -16,13 +37,14 @@ document
       imageList.appendChild(img);
     };
     reader.readAsDataURL(file);
-  });
+  }
+}
 
 function addImageToCanvas(src) {
   const img = document.createElement('img');
   img.src = src;
   img.classList.add('canvas-item');
-  img.style.right = '100px';
+  img.style.left = '100px';
   img.style.top = '100px';
   img.addEventListener('mousedown', startDrag);
   canvas.appendChild(img);

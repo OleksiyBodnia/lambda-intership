@@ -60,10 +60,12 @@ body {
     cursor: move;
     width: 30%;
     height: auto;
+    user-select: none;
 }
 .canvas-text {
     cursor: move;
     font-size: 25px;
+    user-select: none;
 }
 .image-thumbnail {
     width: 50px;
