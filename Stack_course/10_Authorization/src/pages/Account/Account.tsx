@@ -28,7 +28,7 @@ const Account: React.FC = () => {
           );
           localStorage.setItem('accessToken', refreshResponse.data.body.access_token);
           localStorage.setItem('refreshToken', refreshResponse.data.body.refresh_token);
-          setMessage('Token was refreshed');
+          setMessage('Token is valid');
           return;
         }
         setMessage('Token is valid');
