@@ -1,0 +1,14 @@
+@import "./body.css";
+@import "./container.css";
+
+@import "./header.css";
+@import "./aside.css";
+@import "./main.css";
+@import "./table.css";
+@import "./info.css";
+@import "./pagination.css";
+@import "./about.css";
+
+@import "./home.css";
+@import "./dashboard.css";
+@import "./search.css";

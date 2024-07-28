@@ -1,0 +1,137 @@
+.search {
+  background-color: var(--secondary-bg);
+  border: 1px solid #f4f5f7;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 24px;
+}
+
+.search__title {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 8px 0;
+}
+
+.search__wrapper {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.search__icon {
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translateY(-50%);
+  z-index: 2;
+  background-color: transparent;
+  border-style: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.search__input {
+  position: relative;
+  width: 50%;
+  height: 40px;
+  padding: 8px 12px 8px 40px;
+  border: 1px solid #a8aeb9;
+  border-radius: var(--radius);
+  font-size: 16px;
+}
+
+.search__input::placeholder {
+  color: #a8aeb9;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.search__fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+  /* margin-bottom: 12px; */
+}
+
+.search__legend {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0 0 8px 0;
+}
+.search_resultsTitle {
+  line-height: 28px;
+  font-size: 18px;
+  margin-top: 17px;
+  margin-bottom: 8px;
+  /* margin-top: 0;
+	margin-bottom: 0; */
+}
+.search__noResults {
+  margin-top: 24px;
+  line-height: 24px;
+}
+
+.search__label {
+  position: relative;
+  margin-right: 12px;
+}
+
+.search__label:last-child {
+  margin-right: 0;
+}
+
+.search__radio {
+  width: 20px;
+  height: 20px;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+  border-style: solid;
+  border-radius: 50%;
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  left: -5px;
+  top: -1px;
+}
+.search__radio:checked {
+  border-width: 5px;
+  border-color: rgba(59, 130, 246, var(--tw-border-opacity));
+}
+
+.search__article {
+  display: flex;
+  flex-direction: column;
+  height: 44px;
+  margin-bottom: 8px;
+}
+
+.search__article:last-child {
+  margin-bottom: 0;
+}
+
+.search__link {
+  line-height: 24px;
+  text-decoration: none;
+  color: #2563eb;
+}
+
+.search__text {
+  font-size: 14px;
+  line-height: 20px;
+  color: #9ca3af;
+  margin: 0 0 8px 0;
+}
+.search__radioContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search__radioDiv {
+  display: flex;
+  align-items: center;
+}

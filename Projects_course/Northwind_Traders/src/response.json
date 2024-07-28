@@ -1,0 +1,44 @@
+{
+    "sqlLogs": [
+      {
+        "logs": "select \"customer_id\", \"company_name\", \"contact_name\", \"contact_title\", \"address\", \"city\", \"region\", \"postal_code\", \"country\", \"phone\", \"fax\" from \"customer\" limit $1",
+        "logsData": "2024-07-28T12:33:26.869Z, v3-prod, 7ms",
+        "resultsCount": 10
+      },
+      {
+        "logs": "select count(*) from \"customer\"",
+        "logsData": "2024-07-28T12:33:26.869Z, v3-prod, 7ms",
+        "resultsCount": 1
+      },
+      {
+        "logs": "select \"customer_id\", \"company_name\", \"contact_name\", \"contact_title\", \"address\", \"city\", \"region\", \"postal_code\", \"country\", \"phone\", \"fax\" from \"customer\" limit $1",
+        "logsData": "2024-07-28T12:33:38.158Z, v3-prod, 5ms",
+        "resultsCount": 20
+      },
+      {
+        "logs": "select count(*) from \"customer\"",
+        "logsData": "2024-07-28T12:33:38.158Z, v3-prod, 5ms",
+        "resultsCount": 1
+      },
+      {
+        "logs": "select \"customer_id\", \"company_name\", \"contact_name\", \"contact_title\", \"address\", \"city\", \"region\", \"postal_code\", \"country\", \"phone\", \"fax\" from \"customer\" where \"customer\".\"customer_id\" = $1 limit $2",
+        "logsData": "2024-07-28T12:33:43.786Z, v3-prod, 2ms",
+        "resultsCount": 1
+      },
+      {
+        "logs": "select \"id\", \"supplier_id\", \"company_name\", \"contact_name\", \"contact_title\", \"address\", \"city\", \"region\", \"postal_code\", \"country\", \"phone\", \"fax\", \"home_page\" from \"supplier\" limit $1",
+        "logsData": "2024-07-28T12:33:53.142Z, v3-prod, 6ms",
+        "resultsCount": 20
+      },
+      {
+        "logs": "select count(*) from \"supplier\"",
+        "logsData": "2024-07-28T12:33:53.142Z, v3-prod, 6ms",
+        "resultsCount": 1
+      },
+      {
+        "logs": "select \"id\", \"supplier_id\", \"company_name\", \"contact_name\", \"contact_title\", \"address\", \"city\", \"region\", \"postal_code\", \"country\", \"phone\", \"fax\", \"home_page\" from \"supplier\" where \"supplier\".\"supplier_id\" = $1 limit $2",
+        "logsData": "2024-07-28T12:33:58.977Z, v3-prod, 2ms",
+        "resultsCount": 1
+      }
+    ]
+  }

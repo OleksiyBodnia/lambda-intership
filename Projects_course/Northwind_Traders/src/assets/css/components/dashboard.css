@@ -1,0 +1,47 @@
+.dashboard {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	/* column-gap: 10px; */
+	row-gap: 24px;
+	padding: 24px;
+}
+
+.dashboard__log {
+	grid-column: span 2;
+}
+
+.dashboard__title {
+	font-size: 20px;
+	line-height: 28px;
+	font-weight: 400;
+	margin: 0;
+}
+
+.dashboard__text {
+	color: #1f2937;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	margin: 0;
+}
+
+.dashboard__text--small {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.dashboard__article {
+	margin: 8px 0;
+}
+.dashboard__text__data{
+	font-size: 12px;
+	line-height: 16px;
+	color: #9ca3af;
+	margin: 0;
+}
+
+.dashboard__sql{
+	position: relative;
+	left: -2.5px;
+}
