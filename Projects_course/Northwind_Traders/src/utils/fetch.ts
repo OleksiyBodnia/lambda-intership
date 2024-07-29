@@ -5,12 +5,15 @@ import { ApiResponse } from '../types/api';
 export async function fetchData<T>(endpoint: string) {
   try {
     const response = await axios.get<ApiResponse<T>>(
-      `https://northwindtraders-sparkling-dawn-9488.fly.dev${endpoint}`
+      `https://northwindtraders-sparkling-dawn-9488.fly.dev${endpoint}`,
+      {
+        withCredentials: true
+      }
     );
 
     const data = response.data;
 
-    // console.log('API Response:', data);
+    console.log('API Response:', data);
 
 
 	return data;

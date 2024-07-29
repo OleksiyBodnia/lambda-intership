@@ -26,8 +26,10 @@ const Dashboard: FC = () => {
     const fetchDashboardData = async () => {
       try {
 
-        await fetchData("/customers");
+        const customers = await fetchData("/customers");
         await fetchData("/suppliers");
+        
+        console.log(customers)
 
         const data = await fetchData("/dashboard/logs");
         console.log(data)
